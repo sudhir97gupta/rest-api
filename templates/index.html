@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Item Manager</h1>
+
+        <!-- Form to Add Item -->
+        <form id="add-item-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="number" id="item-price" placeholder="Item Price" required>
+            <button type="submit">Add Item</button>
+        </form>
+
+        <!-- Form to Update Item -->
+        <form id="update-item-form">
+            <input type="text" id="update-item-name" placeholder="Item Name to Update" required>
+            <input type="number" id="update-item-price" placeholder="New Price" required>
+            <button type="submit">Update Item</button>
+        </form>
+
+        <!-- Form to Get Specific Item -->
+        <form id="get-item-form">
+            <input type="text" id="get-item-name" placeholder="Item Name to Search" required>
+            <button type="submit">Get Item</button>
+        </form>
+
+        <button onclick="getItems()">Get All Items</button>
+        <div class="item-list" id="item-list"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
